@@ -53,11 +53,11 @@ class MoviesController < ApplicationController
   def same_director
     @movie = Movie.find(params[:id])
     dir = @movie.director
-    #sad path
+    #sad path-No common director
     if dir.nil? or dir.empty? then
       flash[:notice] = "'#{@movie.title}' has no director info"
       redirect_to movies_path
-    # happy path
+    #happy path-Movies with same director
     else
       @movies = Movie.same_directors(dir)
     end

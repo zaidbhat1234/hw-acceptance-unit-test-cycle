@@ -23,13 +23,16 @@ module NavigationHelpers
        '/movies'
        
     when /^the edit page for "([^"]+)"$/
-      edit_movie_path(Movie.find_by_title($1).id)
+      id = Movie.find_by_title($1).id
+      edit_movie_path(id)
       
     when /^the details page for "(.*)"$/
- 	    movie_path Movie.find_by_title($1)
+      path = Movie.find_by_title($1)
+ 	    movie_path path
 
      when /^the Similar Movies page for "(.*)"$/
- 	    same_director_path Movie.find_by_title($1)
+      path = Movie.find_by_title($1)
+ 	    same_director_path path
 
      when /^the RottenPotatoes home page$/ then '/movies'
 

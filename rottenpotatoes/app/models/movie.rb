@@ -1,8 +1,7 @@
 class Movie < ActiveRecord::Base
     def self.same_directors director
         if director.nil? or director.empty? then
-            #flash[:notice] = "'#{@movie.title}' has no director info"
-            #redirect_to movies_path
+            return nil
             
         else
             Movie.where(:director => director)

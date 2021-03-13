@@ -50,5 +50,5 @@ end
 
 Then(/^the director of "([^"]*)" should be "([^"]*)"$/) do |title, dir|
   movie = Movie.find_by_title(title)
-  expect(movie.director).to eq dir
+  movie.director.should == dir
 end

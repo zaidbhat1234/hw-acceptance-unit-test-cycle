@@ -19,7 +19,7 @@ describe Movie do
   
   describe 'test for all_ratings' do
     it 'returns all ratings' do
-      expect(Movie.all_ratings).to match(%w(G PG PG-13 NC-17 R))
+      Movie.all_ratings.should == %w(G PG PG-13 NC-17 R)
     end
   end
 end
