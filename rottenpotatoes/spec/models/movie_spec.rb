@@ -4,7 +4,7 @@ describe Movie do
   before(:each) do
     @movie1 = FactoryBot.create(:movie, id: '1', title: "Interstellar", rating: "G", description: "test", release_date: "10-03-2000", director: "Christopher Nolan")
     @movie2 = FactoryBot.create(:movie, id: '2', title: "The Prestige", rating: "G", description: "test", release_date: "20-03-2002", director: "Christopher Nolan")
-    @movie3 = FactoryBot.create(:movie, id: '3', title: "Batman vs Superman", rating: "G", description: "31-03-1997", release_date: "Zack Snyder")
+    @movie3 = FactoryBot.create(:movie, id: '3', title: "Batman vs Superman", rating: "G", description: "test", release_date: "31-03-1997")
   end
 
   describe 'test director methods for sad and happy path of movies in before(:each)' do
