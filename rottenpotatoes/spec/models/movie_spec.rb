@@ -1,6 +1,8 @@
 require 'rails_helper'
+require 'spec_helper'
 
-describe Movie do
+RSpec.describe MoviesController, type: :controller do
+  
   before(:each) do
     @movie1 = FactoryBot.create(:movie, id: '1', title: "Interstellar", rating: "G", description: "test", release_date: "10-03-2000", director: "Christopher Nolan")
     @movie2 = FactoryBot.create(:movie, id: '2', title: "The Prestige", rating: "G", description: "test", release_date: "20-03-2002", director: "Christopher Nolan")
